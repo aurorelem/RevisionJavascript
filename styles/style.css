@@ -1,0 +1,42 @@
+html {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    background-color: ghostwhite;
+}
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 0 20px 20px 20px;
+    border: 2px solid blueviolet;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: coral;
+    text-shadow: 3px 3px 3px black;
+}
+
+img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: left;
+    color: darkorange;
+    text-shadow: 1px 1px 1px black;
+}
+
+p, li {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 2;
+    letter-spacing: 1px;
+}

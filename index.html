@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,700;1,200&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="Images/logoJs.svg" type="image/x-icon">
-    <script src="scripts/main.js"></script>
+    <!--<scrip defer src="scripts/main.js"></script> defer indique au navigateur de charger le script en arrière plan tout en continuant à analyser le reste de la page. Il sera exécuté une fois que tout le contenu HTML est chargé. Poss. "async" alors en parallèle -->
 </head>
 <body>
     <h1>Les bases de Javascript</h1>
@@ -63,5 +63,25 @@
         Pour commencer, nous allons vous montrer comment ajouter un JS basique à votre page, 
         en créant un exemple " Hello world !" (la norme en matière d'exemples de programmation de base).
     </p>
+    <ol>
+        <li>Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé "scripts" (sans les guillemts). Ensuite, dans le nousveau dossier <b>scripts</b> que vous venez de créer, créez un nouveau fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.</li>
+        <li>
+            Ensuite, dans votre fichier <b>index.html</b>, ajoutez l'élément suivant sur une nouvelle ligne avant la balise fermante <b>body</b>: 
+            &lt;script src="scripts/main.js"&gt;&lt;/script&gt; <!-- nous utilisons '&lt;' pour rprésenter le caractère '<' et '&gt;' pour représenter le caractère '>'. De cette manière, le code <script ......script> est affiché sans être interprété par le navigateur en tant que balise html, mais simplement comme du texte brut dans la liste à puces-->
+        </li>
+        <li>
+            Cet élément a le même rôle que l'élément &lt;<u>link</u>&gt; pour le CSS - il applique le code JavaScript à la page, 
+            de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le CSS et autre sur la page).
+        </li>
+        <li>
+            Maintenant ajoutez le code suivant dans <b>main.js</b>:<br>
+            let myHeading = document.querrySelector("h1");<br>
+            myHeading.textContent = "Bonjour le monde !";
+        </li>
+        <li>Assurez-vous que les fichiers HTML et JavaScript soient en registrés puis chargez <b>index.html</b> dans votre navigateur. Vous devriez obtenir quelque chose comme:</li>
+    </ol>
+    <img src="Images/BonjourLeMonde.jpg" alt="Bonjour le monde en JS">
+<script src="scripts/main.js"></script>    
 </body>
+
 </html>

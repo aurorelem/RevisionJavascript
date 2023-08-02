@@ -27,10 +27,6 @@ img {
     margin: 0 auto;
 }
 
-img2 {
-    
-}
-
 h2 {
     font-size: 30px;
     text-align: left;
@@ -43,4 +39,22 @@ p, li {
     text-align: justify;
     line-height: 2;
     letter-spacing: 1px;
+}
+
+.note {
+    width: 600px;
+    margin: 20px 80px;
+    padding: 20px;
+    border: 2px blue solid;
+    text-align: justify;
+    background-color: aqua;
+}
+
+.attention {
+    width: 600px;
+    margin: 20px 80px;
+    padding: 20px;
+    border: 2px red solid;
+    text-align: justify;
+    background-color: yellow;
 }

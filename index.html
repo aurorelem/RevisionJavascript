@@ -81,7 +81,51 @@
         <li>Assurez-vous que les fichiers HTML et JavaScript soient en registrés puis chargez <b>index.html</b> dans votre navigateur. Vous devriez obtenir quelque chose comme:</li>
     </ol>
     <img src="Images/BonjourLeMonde.jpg" alt="Bonjour le monde en JS">
-<script src="scripts/main.js"></script>    
+    <p class="note">
+        <b>Note</b>: La raison pour laquelle nous avons placé l'élément &lt;script&gt; en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. 
+        Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. 
+        Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.
+    </p>
+    <h2>Que s'est-il passé ?</h2>
+    <p>
+        Le texte du titre a été changé en "Bonjour le monde !" en utilisant le JavaSctipt. Pour cela, on a utilisé une fonction appellée <u><b>querrySelector()</b></u> 
+        pour obtenir une référence sur l'entête et la stocker dans une variable appelée <b>myHeading</b>. 
+        C'est assez proche de ce qu'on fait avec les selecteurs CSS. Lorsqu'on souhaite manipuler un élément, il faut d'abord le sélectionner.
+    </p>
+    <br>
+    <p>
+        Ensuite, nous fixons à " Bonjour le monde !" la valeur de la propriété <u><b>textContent</b></u> de la variable <b>myHeading</b> (elle représente le contenu du titre).
+    </p>
+    <p class="note">
+        <b>Note</b>; Les deux fonction que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.
+    </p>
+    <h2>Les bases du JavaScript en accéléré</h2>
+    <p>
+        Nous allons explorer les fonctionnalité de base de JavaScript pour que vous puissiez mieux comprendre comment il fonctionne. 
+        Ces fonctionalités sont commune à la plupart des langages de programmation, si vous comprennez ces éléments en JS, 
+        vous êtes en bonne voie de pouvoir programmer à peu près n'importe quoi !
+    </p>
+    <p class="attention">
+        <u>Attention</u>: Tout au long de cette article, vous pouvez saisir les ligne de code dans votre console JS pour voir ce qui se passse. Pour plus de détails sur les console JS, 
+        vous pouvez lire <u><b>Découvrir les outils de développement présent dans le navigateur</b></u>.
+    </p>
+    <h2>Les variables</h2>
+    <p>
+        Les <u><b>variables</b></u> sont des conteneurs dans lesquels on peut stocker des valeurs. Pour commencer, il faut déclarer une variable avec le mot-clé 
+        <b>let</b> en le faisant suivre de son nom:<br>
+        Let myVariable;
+    </p>
+    <p class="note">
+        <b>Note</b>: Un point-virgule en fin de ligne indique là où se termine l'instruction ; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. 
+        Toutefois, certain pense qu'il est de bonne pratique de les mettre à la fin de chaque instruction. 
+        Il y a d'autres règle à propos de leur emploi ou non-emploi - voyez <u>Guide des points-virgule en JS</u> pour plus de détails.
+    </p>
+    <p class="note">
+        <b>note</b>: Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restricitions (voyez <u>cet article</u>) sur les règles de nommage des variables. 
+        Si vous avez un doute, vous pouvez <u>vérifier le nom de votre variable</u> pour voir s'il est valide.
+    </p>
+
+    <script src="scripts/main.js"></script>    
 </body>
 
 </html>

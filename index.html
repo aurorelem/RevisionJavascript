@@ -24,14 +24,12 @@
         peut fournir une interactivité dynamique sur des sites web. 
         Il a été inventé par Brendan Eich, co-fondateur du projet Mozilla, etc,...
     </p>
-    <br>
     <p>
         Le JS est d'une incroyable flexibilité. Vous pouvez commencer petit, avec des carrousels, 
         des galeries d'images, des variations de mise en page et des réponses aux clics de boutons. 
         Avec plus d'expérience, vous serez en mesure de créer des jeux, des graphique 2D et 3D animé, 
         des applications complètes fondées sur des bases de données et bien plus encore!
     </p>
-    <br>
     <p>
         JS est plutôt compact tout en étant très souple. Les développeurs ont écrit de nombreux outils 
         sur le coeur du langage JS, créant des fonctionalités supplémentaires très simplement. 
@@ -53,7 +51,6 @@
             mettre en oeuvre rapidement des sites et des applications.
         </li>
     </ul>
-    <br>
     <p>Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, 
         et vous pratiquerez aussi en manipulant les fonctionalités des API navigateur. 
         Amusez-vous bien !
@@ -92,7 +89,6 @@
         pour obtenir une référence sur l'entête et la stocker dans une variable appelée <b>myHeading</b>. 
         C'est assez proche de ce qu'on fait avec les selecteurs CSS. Lorsqu'on souhaite manipuler un élément, il faut d'abord le sélectionner.
     </p>
-    <br>
     <p>
         Ensuite, nous fixons à " Bonjour le monde !" la valeur de la propriété <u><b>textContent</b></u> de la variable <b>myHeading</b> (elle représente le contenu du titre).
     </p>
@@ -121,9 +117,67 @@
         Il y a d'autres règle à propos de leur emploi ou non-emploi - voyez <u>Guide des points-virgule en JS</u> pour plus de détails.
     </p>
     <p class="note">
-        <b>note</b>: Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restricitions (voyez <u>cet article</u>) sur les règles de nommage des variables. 
+        <b>Note</b>: Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restricitions (voyez <u>cet article</u>) sur les règles de nommage des variables. 
         Si vous avez un doute, vous pouvez <u>vérifier le nom de votre variable</u> pour voir s'il est valide.
     </p>
+    <p class="note">
+        <b>Note</b>; JS est sensible à la case - <b>myVariable</b> est une variable différente de <b>myvariable</b>. Si vous avez des problèmes dans votre code, vérifiez la classe !
+    </p>
+    <p>
+        Une fois une variable déclarée, vous pouvez lui donner une valeur:<br>
+        myVariable = "Bob";
+    </p>
+    <p>
+        Vous pouvez faire les deux opérations sur une même ligne, si vous le souhaitez :<br>
+        let myVariable = "Bob";
+    </p>
+    <p>
+        Vous retrouvez la valeur en appelant simplement la variable par son nom:<br>
+        myVariable:
+    </p>
+    <p>
+        Une fois qu'on a donné une valeur à une variable, on peut la changer plus loin:<br>
+        let myVariable = "Bob";
+        myVariable = "Etienne";
+    </p>
+    <p>
+        Notez que les variables peuvent contenir des <u>types différent de données:</u>
+    </p>
+    <table class="firstTableau">
+        <tr>
+            <td>Colonne 1 - Ligne 1</td>
+            <td>Colonne 2 - Ligne 1</td>
+            <td>Colonne 3 - Ligne 1</td>
+        </tr>
+        <tr>
+            <td>Colonne 1 - Ligne 2</td>
+            <td>Colonne 2 - Ligne 2</td>
+            <td>Colonne 3 - Ligne 2</td>
+        </tr>
+        <tr>
+            <td>Colonne 1 - Ligne 3</td>
+            <td>Colonne 2 - Ligne 3</td>
+            <td>Colonne 3 - Ligne 3</td>
+        </tr>
+        <tr>
+            <td>Colonne 1 - Ligne 4</td>
+            <td>Colonne 2 - Ligne 4</td>
+            <td>Colonne 3 - Ligne 4</td>
+        </tr>
+        <tr>
+            <td>Colonne 1 - Ligne 5</td>
+            <td>Colonne 2 - Ligne 5</td>
+            <td>Colonne 3 - Ligne 5</td>
+        </tr>
+        <tr>
+            <td>Colonne 1 - Ligne 6</td>
+            <td>Colonne 2 - Ligne 6</td>
+            <td>Colonne 3 - Ligne 6</td>
+        </tr>
+    </table>
+    
+    </body>
+    </html>
 
     <script src="scripts/main.js"></script>    
 </body>

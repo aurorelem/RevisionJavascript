@@ -58,3 +58,12 @@ p, li {
     text-align: justify;
     background-color: yellow;
 }
+
+.firstTableau {
+    /*width: 400px;*/
+    margin: 5px 10px;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: justify;
+    background-color: gray;
+}

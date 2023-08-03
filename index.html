@@ -189,6 +189,57 @@
         Si votre commentaire tient sur une ligne, vous pouvez utiliser deux barres obliques pour indiquer un commentaire :<br>
         // Voici un commentaire
     </p>
+    <h2>Opérateurs</h2>
+    <p>
+        Un <u>opérateur</u> est un symbole mathématique qui produit un résultat en fonction de deux valeurs 
+        (ou variables). Le tableau suivant liste certains des opérateurs les plus simples ainsi que 
+        des exemples que vous pouvez tester dans votre console JavaScript.
+    </p>
+    <table>
+        <tr>
+            <td><b>Opérateur</b></td>
+            <td><b>Explication</b></td>
+            <td><b>Symbole(s)</b></td>
+            <td><b>Exemple</b></td>
+        </tr>
+        <tr>
+            <td><b>Addition</b></td>
+            <td>Utilisé pour ajouter deux nombres ou concaténer (accoler) deux chaînes.</td>
+            <td>+</td>
+            <td>6 + 9;<br>"Bonjour " + "monde !";</td>
+        </tr>
+        <tr>
+            <td><b>Soustraction,<br> multiplication,<br> division</b></td>
+            <td>Les opérations mathématiques de base.</td>
+            <td>-, *, /</td>
+            <td>9 - 3;<br>8 * 2; // pour multiplier, on utilise un astérisque<br>9 / 3;</td>
+        </tr>
+        <tr>
+            <td><b>Assignation</b></td>
+            <td>On a déjà vu cet opérateur : il affecte une valeur à une variable.</td>
+            <td>=</td>
+            <td>let myVariable = 'Bob';</td>
+        </tr>
+        <tr>
+            <td><b>Egalité</b></td>
+            <td>Teste si deux valeurs sont égales et renvoie un booléen true/false comme résultat.</td>
+            <td>===</td>
+            <td>let myVariable = 3;<br>myVariable === 4;</td>
+        </tr>
+        <tr>
+            <td><b>Négation,<br> N'égale pas</b></td>
+            <td>Renvoie la valeur logique opposée à ce qu'il précède ; il change true en false, etc. Utilisé avec l'opérateur d'égalité, l'opérateur de négation teste que deux valeurs ne sont pas égales.</td>
+            <td>!, !==</td>
+            <td>
+                L'expression de base est vraie, mais la comparaison renvoie false parce que nous la nions :<br>
+                let myVariable = 3;<br>
+                !(myVariable === 3);<br>
+                On teste ici que "myVariable n'est PAS égale à 3". Cela renvoie false, car elle est égale à 3.<br>
+                let myVariable = 3;<br>
+                myVariable !== 3;<br>
+            </td>
+        </tr>
+    </table>
     
     </body>
     </html>

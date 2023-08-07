@@ -390,10 +390,66 @@
             </ol>
         </li>
     </ol>
-
+    <h3>Ajouter un message d'accueil personnalisé</h3>
+    <p>
+        Continuons en ajoutant un peu de code pour changer le titre de la page afin d'inclure un message d'accueil personnalisé pour le visiteur du site.
+        Ce message d'accueil sera concervé quand l'utilisateur quittera le site et y revient - nous le sauvegarderons avec l'<u>API Web Storage</u>.
+        Nous ajouterons également une option pour pouvoir changer l'utilisateur et le message d'accueil si besoin.
+    </p>
+    <ol>
+        <li>
+            Dans le fichier <b>index.html</b>, ajoutons la ligne de code suivante avant l'élément &lt;/script&gt;:<br>
+            &lt;button&gt;Changer d'utilisateur&lt;/button&gt;
+        </li>
+        <li>
+            Dans le fichier <b>main.js</b>, ajoutons le code suivant à la fin du fichier. Cela fait référence au nouveau bouton ajouté et à l'élément de titre puis enregistrons ces références dans des variable:<br>
+            let myButton = document.querySelector("button");<br>
+            let myHeading = document.querySelector("h1");<br>
+        </li>
+        <li>
+            Ajoutons maintenant les fonctionnalité pour avoir ce message d'acceuil personnalisé (cela ne servira pas immédiatement mais un peu plus tard) :<br>
+            function setUserName() {<br>
+                let myName = prompt("Veuillez saisir votre nom.");<br>
+                localStorage.setItem("nom", myName);<br>
+                myHeading.textContent = "Mozilla est cool, " + myName;<br>
+              }<br>
+            <p>
+                Cette fonction utilise la fonction <u>prompt()</u> qui affiche une boîte de dialogue, un peu comme <u>alert()</u> sauf qu'elle permet à l'utilisateur de saisir des données
+                et de les enregistrer dans une variable quand l'utilisateur clique sur <i>OK</i>. Dans notre exemple, nous demandons à l'utilisateur de saisir son nom. Ensuite, nous appellons une API appellée <b>localStorage</b>. 
+                Cette API permet de stocker des données dans le navigateur pour pouvoir les réutiliser unltérieurement. Nous utilisons la fonction <b>setItem()</b> de cette API pour stocker la donnée qui nous intéresse dans un conteneur appelé <b>'nom'</b>.
+                La valeur stockée ici est la valeur de la variable <b>myName</b> qui contient le nom saisi par l'utilisateur. Enfin, on utilise la propriété <b>textContent</b> du titre pour lui affecter un nouveau contenu.
+            </p>     
+        </li>
+        <li>
+            Ajoutons ensuite ce bloc <b>if ... else</b>. Ce code correspond à l'étape d'initialisation car il sera utilisé la première fois que la page est chargée par l'utilisateur:<br>
+            if (!localStorage.getItem("nom")) {<br>
+                setUserName();<br>
+              } else {<br>
+                let storedName = localStorage.getItem("nom");<br>
+                myHeading.textContent = "Mozilla est cool, " + storedName;<br>
+              }<br>
+            <p>
+                Ce bloc utilise l'opérateur de négation (NON logique, représenté avec le !) pour vérifier si le navigateur posséde une donnée enregistrée appelée <b>nom</b>. Si non, 
+                la fonction <b>setUserName()</b> est appelée pour créer cette donnée. Si elle existe (ce qui correspond au cas où l'utilisateur est déjà venu sur la page), 
+                on la récupère ave la méthode <b>detItem()</b> et on définit le contenju de texContent pour le titre avec une chaîne suivie du nom de l'utilisateur, comme nous le faisons dans <b>setUserName()</b>.
+            </p>  
+        </li>
+        <li>
+            Enfin, on associe le gestionnaire <b>onclick</b> au bouton. De cette façon, quand on clique sur le bouton, cela déclenchera l'exécution de la fonction <b>setUserName()</b>
+            Ce bouton permet à l'utilisateur de modifier la valeur s'il le souhaite:<br>
+            myButton.addEventListener("click", function () {<br>
+                setUserName();<br>
+              });<br>
+        </li>
+    </ol>
+    <p>
+        Récapitulons: la première fois que l'utilisateur visite le site, il sera invité à saisir un nom d'utilisateur. Ce nom sera celui utilisé pour afficher un message d'acceuil personnalisé. Si l'utilisateur souhaite changer son nom, il peut clicker sur le bouton.
+        En supplément, le nom est enregistré pour plutard grâce à l'API <b>localStorage</b>, cela permet à l'utilisateur de retrouver son nom, même s'il a fermé la page et/ou le navigateur et qu'il revient plus tard ! 
+    </p>
+    <button>Changer d'utilisateur</button>
     </body>
     </html>
-
+    
     <script src="scripts/main.js"></script>    
 </body>
 

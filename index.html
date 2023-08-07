@@ -317,7 +317,58 @@
           });<br>   
     </p>
     <img src="Images/arrêteDeCliquer.jpg" alt="fenêtre pop-up qui demande d'arrêter de cliquer">
-
+    <p>
+        Il existe plein de méthodes pour "attacher" un évènement à un élémeent. Dans cet exemple, nous avons sélectionné l'élément HTML concerné et nous avons défini un gestionnaire <u><b>onclick</b></u>
+        qui est une propriété qui est égale à une fonction annonyme (sans nom) qui contient le code à exécuter quand l'utilisateur clique.
+    </p>
+    <p>On pourra noter que:</p>
+    <p>
+        document.querySelector("html").addEventListener("click",<br>
+        function () {});<br>
+    </p>
+    <p>est équivalent à:</p>
+    <p>
+        let myHTML = document.querySelector("html");<br>
+        myHTML.addEventListener("click", function () {});<br>
+    </p>
+    <p>La première synatxe est siplement plus courte.</p>
+    <h2>Booster notre site web</h2>
+    <p>
+        Maintenant que nous avons vu quelques bases en JavaScript, nous allons ajouter quelques fonctionalités intéressantes à notre site pour voir ce qu'il est capable de faire.
+    </p>
+    <h3>Ajouter un changeur d'image</h3>
+    <p>
+        Dans cette section, nous allons incorporer une autre image au site en utilisant quelques fonctionalités de l'API DOM et un peu de JavaScript pour alterner entre les deux images lorsqu'on cilque sur l'image affichée.
+    </p>
+    <ol>
+        <li>
+            Tout d'abord, trouvez une image à afficher sur le site. Assurez-vousqu'elles soit de même taille que la première, ou le plus possible approchante.
+        </li>
+        <li>
+            Enregistrez cette image dans votre dossier Images.
+        </li>
+        <li>
+            Renommer cette image "firefox2.png" (sans les guillemets). 
+        </li>
+        <li>
+            Dans le fichier <b>main.js</b>, entrez ce code en JavaScript (si votre code "Bonjour, le monde" est toujours là, supprimez-le):
+            <p>
+                let myImage = document.querySelector("img");<br>
+                <br>
+                myImage.addEventListener("click", function () {<br>
+                let mySrc = myImage.getAttribute("src");<br>
+                if (mySrc === "images/firefox-icon.png") {<br>
+                    myImage.setAttribute("src", "images/firefox2.png");<br>
+                } else {<br>
+                    myImage.setAttribute("src", "images/firefox-icon.png");<br>
+                }<br>
+                });<br>
+            </p>
+        </li>
+        <li>
+            Sauvrgardez tous les fichiers puis chargez <b>index.html</b> dans le navigateur. Maintenant, si vous cliquez sur l'image, elle doit changer pour l'autre !
+        </li>
+    </ol>
 
     </body>
     </html>

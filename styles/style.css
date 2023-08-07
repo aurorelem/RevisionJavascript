@@ -81,3 +81,16 @@ p, li {
     tr:hover {
     background-color: #ddd;
 }
+
+h3 {
+    font-size: 30px;
+    text-align: left;
+    color: darkorange;
+    /*text-shadow: 1px 1px 1px black;*/
+}
+
+/*img2 {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}*/

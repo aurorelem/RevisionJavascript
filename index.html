@@ -103,7 +103,7 @@
     </p>
     <p class="attention">
         <u>Attention</u>: Tout au long de cette article, vous pouvez saisir les ligne de code dans votre console JS pour voir ce qui se passse. Pour plus de détails sur les console JS, 
-        vous pouvez lire <u><b>Découvrir les outils de développement présent dans le navigateur</b></u>.
+        vous pouvez lire <u><b>Découvrir les outils de développement présent dans le navigateur ! A FAIRE !</b></u>.
     </p>
     <h2>Les variables</h2>
     <p>
@@ -240,7 +240,85 @@
             </td>
         </tr>
     </table>
-    
+    <p>
+        Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir <u>Expressions et opérateurs</u> pour la liste complète.
+    </p>
+    <p class="note">
+        <b>Note</b>: mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prennez soin de vous référer correctement à vos variables et d'obtenir 
+        les résultats attendus. Par exemple, entrez "35" + "25" dans votre console. Pourquoi n'obtenez-vous pas le résulata attendu? Parce que les guillemets ont transformé les nombres en chaînes,
+        et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. ici, le résultat de la concaténation est '3525'. Et si on entre 35 + 25, on obtient le bon résultat.
+    </p>
+    <h2>Structures conditionnelles</h2>
+    <p>
+        Les suructures conditionnelles sont des éléments du code qui permettent de tester si une expression est vraie ou non et d'exécuter des instructions différentes selon le résultat. 
+        La structure conditionnelle utilisée la plus fréquemment est <b>if ... else</b>. Par exemple:<br>
+        let iceCream = "chocolat";<br>
+        if (iceCream === "chocolat") { <br>
+            alert("J'adore la glace au chocolat !");<br>
+          } else {<br>
+            alert("Ooooh, mais j'aurais préféré au chocolat.");<br>
+          }<br>
+    </p>
+    <p>
+        L'expression contenue dans <b>if (... )</b> correspond au test - ici, on utilise l'opérateur d'égalité (décrit plus haut) pour comparer la variable <b>iceCream</b> 
+        avec la chaîne de caractère <b>chocolat</b> pour voir si elles sont égales. Si cette comparaison renvoie <b>true</b>, le premier bloc de code sera exécuté. 
+        Sinon, le premier bloc est sauté et c'est le code du second bloc, celui après <b>else</b>, qui sera exécuté.
+    </p>
+    <h2>Fonctions</h2>
+    <p>
+        Les fonctions sont un moyen de compacter des fonctionalitésen vue de leur réutilisation. Quand vous avez besoin de la procédure, vous pouvez appeler une fonction, par son nom, 
+        au lieu de ré-écrire la totalité du code à chaque fois. Nous avons déjà utilisé des fonctions plus haut; par exemple:<br>
+        let my variable = document.querySelector('h1');<br>
+        alert("Bonjour");<br>
+    </p>
+    <p>
+        Ces fonctions (<b>querySelector</b> et <b>alert</b>) sont
+        disponibles dans le navigateur et vous pouvez les utiliser où bon vous semble.
+    </p>
+    <p>
+        Si vous voyez quelque chose qui ressemble à un nom de variable et qui est suivit de parenthèses - () -, c'est probablement une fonction.
+        Les fonctions prennent souvent des <u>arguments</u> - bouts de données dont elles ont besoin pour faire leur travail. 
+        Ils sont placés entre parenthèses, séparés par des virgules s'il y en a plusieurs.
+    </p>
+    <p>
+        Par exemple, la fonction <b>alert()</b> fait apparaître une fenêtre de pop-up dans la fenêtre du navigateur, 
+        mais vous devez donner une chaîne comme argument pour indiquer à la fonction ce que l'on souhaite écrire dans cette fenêtre.
+    </p>
+    <p>
+        La bonne nouvelle est que vous pouvez définir vos propres fonctions - pas exemple, vous pouvez écrire une fonction toute simple qui prend deux arguments et les multiplie:
+    </p>
+    <p>
+        function multiply(num1, num2) {<br>
+            let result = num1 * num2;<br>
+            return result;<br>
+        }<br>
+    </p>
+    <p>
+        Vous pouvez déclarer cette fonction dans la console avant de l'utiliser plusieurs fois:<br>
+        multiply(4, 7);<br>
+        multiply(20, 20);<br>
+        muliply(0.5, 3);<br>
+    </p>
+    <img src="Images/RésultatsMultiplications.jpg" alt="Résultats de multiplication">
+    <p class="note">
+        L'instruction <b>return</b> indique au navigateur qu'il faut renvoyer le variable <b>result</b> en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. 
+        Cette instruction est nécessaire car les variables définie à l'intérieur des fonctions sont uniquement disponible à l'intérieur de ces fonctions? C'est ce qu'on appelle une <u>portée</u>
+        (pour en savoir plus, lisez <u>cet article</u>).
+    </p>
+    <h2>Evènements</h2>
+    <p>
+        Pour qu'un site web soit vraiment interactif, vous aurez besoin d'évènements. Les évènements sont des structures de code qui "écoutent" ce qui se passe dans le navigateur et déclenchent du code en réponse.
+        Le meilleir exemple est <u>l'évènement cliquer</u>, déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. A titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours:
+    </p>
+    <p>
+        document.querySelector("html").addEventListener("click",<br>
+        function () {<br>
+            alert("Aïe, arrêtez de cliquer !!");<br>
+          });<br>   
+    </p>
+    <img src="Images/arrêteDeCliquer.jpg" alt="fenêtre pop-up qui demande d'arrêter de cliquer">
+
+
     </body>
     </html>
 

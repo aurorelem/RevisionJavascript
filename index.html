@@ -369,6 +369,27 @@
             Sauvrgardez tous les fichiers puis chargez <b>index.html</b> dans le navigateur. Maintenant, si vous cliquez sur l'image, elle doit changer pour l'autre !
         </li>
     </ol>
+    <p>
+        Dans cet exemple, nous utilisons une référence vers l'élémeent <u>"img"</u> grâce à la variable <b>myImage</b>.
+        Ensuite, nous égalons la propriété du gestionnaire d'évènements <b>onclick</b> de cette variable à une fonction
+        sans nom (une fonction annonyme).Maintenant chaque fois que cet élément est cliqué:
+    </p>
+    <ol>
+        <li>
+            Nous récupérons la valeur de l'attribut <b>src</b> de l'image.
+        </li>
+        <li>
+            Nous utilisons une structure conditionnelle pour voir si la valeur de <b>src</b> est égale au chemin de l'image originale:
+            <ol>
+                <li>
+                    Si c'est le cas, nous changeons la valeur de src et indiquons le chemin vers la seconde image, forçant le chargement de cette image dans l'élément <u>"img"</u>.
+                </li>
+                <li>
+                    Si ce n'est pas le cas (ce qui signifie que l'image à déjà été changée), la valeur de <b>src</b> revient à sa valeur initiale.
+                </li>
+            </ol>
+        </li>
+    </ol>
 
     </body>
     </html>
